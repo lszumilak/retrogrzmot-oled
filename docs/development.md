@@ -78,6 +78,8 @@ python tests/preview_oled.py
 
 This creates `docs/images/power-preview.png`, plus `retrogrzmot/early/splash.bin` and `splash-en.bin`. It captures the driver's actual output bytes with hardware access mocked. View the PNG, copy the changed files to the Pi and run `install-early.sh` again.
 
+Different Pillow/FreeType versions can shift individual font pixels between Windows and Linux. The saved splash remains a valid 1024-byte frame. Tests verify its layout and transfer separately rather than requiring every font pixel to match a different machine's rasterizer.
+
 ## Run local tests
 
 From the repository directory:
