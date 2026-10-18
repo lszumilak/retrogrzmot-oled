@@ -1,0 +1,21 @@
+#!/bin/bash
+APP=/userdata/system/retrogrzmot/oled.py
+case "$1" in
+    start)
+        python3 "$APP" status && exit 0
+        nohup python3 -u "$APP" run >> /tmp/retrogrzmot-oled.log 2>&1 < /dev/null &
+        for attempt in {1..30}; do
+            python3 "$APP" status && exit 0
+            sleep 0.1
+        done
+        echo 'OLED did not start. Read /tmp/retrogrzmot-oled.log for details.' >&2
+        exit 1
+        ;;
+    stop) python3 "$APP" stop ;;
+    restart)
+        python3 "$APP" stop || exit 1
+        bash "$0" start
+        ;;
+    status) python3 "$APP" status ;;
+    *) echo "Usage: $0 {start|stop|restart|status}"; exit 1 ;;
+esac

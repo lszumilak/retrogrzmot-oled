@@ -1,0 +1,7 @@
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+retrogrzmot/retrogrzmot-oled text eol=lf
+*.bin binary
+*.ttf binary
+*.png binary

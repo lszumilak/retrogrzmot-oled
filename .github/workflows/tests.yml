@@ -1,0 +1,23 @@
+name: Tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Check Bash syntax
+        run: |
+          bash -n retrogrzmot/install.sh
+          bash -n retrogrzmot/install-early.sh
+          bash -n retrogrzmot/retrogrzmot-oled
+          bash -n retrogrzmot/early/boot-custom.sh
+      - name: Run display tests without hardware
+        run: python tests/test_oled.py
