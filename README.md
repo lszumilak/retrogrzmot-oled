@@ -4,6 +4,27 @@ An SSD1306 OLED companion display for **Batocera on Raspberry Pi 3B+**, built fo
 
 The TV runs your games. The small OLED on the case shows what the console is doing.
 
+## The bigger project: RETROGRZMOT
+
+**RETROGRZMOT is a hands-on project to build a simple retro console around a Raspberry Pi 3B+ running Batocera, with a custom 3D-printed enclosure.** This repository documents the small OLED display; it is one part of the complete console project.
+
+The Polish name translates into English as **RETROTHUNDER**. The project keeps **RETROGRZMOT** as its name — you're welcome to give the Polish pronunciation a try!
+
+### Learning by building
+
+I am learning 3D modelling and programming as I go, and I use large language models (LLMs) to help with both. The goal is to make a working console and share instructions that another beginner can follow.
+
+Code described as hardware-tested is first installed and tried on my own console. At enclosure milestones, I print the parts on a **Kobra X**, assemble the case with the electronics, and look for fit problems or other issues to fix in the next iteration. Generated code and CAD suggestions are starting points; the physical build is where I check them.
+
+The enclosure is still evolving. The shared visualization shows the current design work, rather than certifying that every revision is finished or ready to print. The tested setup and limitations of this OLED component are documented below.
+
+### Follow the project
+
+- [RETROGRZMOT Facebook group](https://www.facebook.com/groups/29082068688145685) — follow the project and join the discussion; Facebook may require you to sign in or join the group.
+- [Current enclosure visualization in Autodesk's 3D viewer](https://gmail3570209.autodesk360.com/g/shares/SH90d2dQT28d5b602811eab9b569f9b2809b) — explore the shared enclosure design.
+
+The code and instructions in this repository remain publicly available without joining Facebook.
+
 ## What it shows
 
 | When | OLED screen |
