@@ -36,3 +36,11 @@ Read the labels printed on your OLED. Similar-looking modules can put their pins
 Check every wire against the table. Then connect HDMI and restore power. A black OLED is normal at this stage: it has not been initialized by the software yet.
 
 Continue with [software installation](installation.md).
+
+## Optional EXIT button
+
+A separate normally-open momentary button connects **BCM GPIO26 (D26, physical pin 37)** to a free **GND**, for example pin 34. The exact GND pin used on the tested build was not recorded. GPIO4/17 stay reserved for OnOff SHIM and GPIO21 for the LED circuit. Disconnect all power before wiring; do not connect EXIT to 3.3 V or 5 V. The EXIT service enables the internal pull-up.
+
+![EXIT wiring](https://raw.githubusercontent.com/lszumilak/retrogrzmot-return-button/main/wiring.svg)
+
+[Full beginner guide and code](https://github.com/lszumilak/retrogrzmot-return-button/blob/main/README.en.md) · [Polski](https://github.com/lszumilak/retrogrzmot-return-button). POWER remains wired to the SHIM BTN pads.

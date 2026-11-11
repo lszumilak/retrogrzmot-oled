@@ -80,3 +80,7 @@ The early logo appears once Linux can access I²C, not instantly when power is c
 Project code and documentation: [MIT](LICENSE). The bundled DejaVu font has its [own license](retrogrzmot/fonts/LICENSE-DejaVu.txt).
 
 No games, BIOS files, private connection information or personal development logs are included.
+
+## Przycisk EXIT / EXIT button
+
+Opcjonalny przycisk powrotu do listy gier bieżącej konsoli: D26 (BCM GPIO26, fizyczny pin 37) i GND. Sprawdzony na Pi 3B+ z Batocerą 43.1. [Instrukcja krok po kroku PL i kod](https://github.com/lszumilak/retrogrzmot-return-button) · [English guide](https://github.com/lszumilak/retrogrzmot-return-button/blob/main/README.en.md) · [Schemat / wiring](https://raw.githubusercontent.com/lszumilak/retrogrzmot-return-button/main/wiring.svg).
